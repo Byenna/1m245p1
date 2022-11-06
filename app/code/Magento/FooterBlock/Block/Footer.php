@@ -21,14 +21,14 @@ class Footer extends \Magento\Framework\View\Element\Template
             parent::__construct($context);
         }
         
-        public function getCmsBlockMore() 
+        public function getCmsBlock() 
         {
-            $cmsblock = [];
+            $cmsblock = "Testing if function is working";
 
-            if ($this->_request->getFullActionName() === 'cms_index_index') {
-                $cmsblock['route'] = 'home';
-                $cmsblock['block'] = $this->cmsblock->setBlockId('footer_offer_more')->toHtml();
-            }
+            // if ($this->_request->getFullActionName() === 'cms_index_index') {
+            //     $cmsblock['route'] = 'home';
+            //     $cmsblock['block'] = $this->cmsblock->setBlockId('footer_offer_more')->toHtml();
+            // }
 
             return $cmsblock;
         }
