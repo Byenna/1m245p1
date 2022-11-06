@@ -23,7 +23,11 @@ class Footer extends \Magento\Framework\View\Element\Template
         
         public function getCmsBlock() 
         {
-            $cmsblock = "Testing if function is working";
+            $cmsblock = "";
+            if ($this->_request->getFullActionName() === 'cms_index_index') {
+                    $cmsblock = "Testing if function is working";
+            }
+        
 
             // if ($this->_request->getFullActionName() === 'cms_index_index') {
             //     $cmsblock['route'] = 'home';
